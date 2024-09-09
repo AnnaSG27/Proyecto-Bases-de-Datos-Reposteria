@@ -34,7 +34,7 @@ CREATE TABLE Productos
 IDProducto int NOT NULL auto_increment UNIQUE,
 NombreProducto varchar(45) NOT NULL,
 DescripcionProducto Text NOT NULL,
-Precio int NOT NULL,
+Precio int NOT NULL, --Eliminé este de Precio porque es mejor el de PrecioProducto que deja trabajarlo como decimal
 Costo int NOT NULL,
 IDCategoria int NOT NULL,
 Porciones varchar(15),
@@ -47,6 +47,8 @@ PrecioProducto DECIMAL NOT NULL,
 PRIMARY KEY (IDProducto),
 FOREIGN KEY (IDCategoria) REFERENCES Categoria(IDCategoria)
 );
+
+ALTER TABLE Productos DROP COLUMN Precio;
 
 CREATE TABLE Carrito
 (
