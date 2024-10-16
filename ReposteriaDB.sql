@@ -34,7 +34,6 @@ CREATE TABLE Productos
 IDProducto int NOT NULL auto_increment UNIQUE,
 NombreProducto varchar(45) NOT NULL,
 DescripcionProducto Text NOT NULL,
-Precio int NOT NULL, --Eliminé este de Precio porque es mejor el de PrecioProducto que deja trabajarlo como decimal
 Costo int NOT NULL,
 IDCategoria int NOT NULL,
 Porciones varchar(15),
@@ -128,3 +127,4 @@ CREATE TABLE Inventario (
     FOREIGN KEY (IDProducto) REFERENCES productos(IDProducto),
     FOREIGN KEY (IDProveedor) REFERENCES proveedores(IDProveedor) 
 );
+
